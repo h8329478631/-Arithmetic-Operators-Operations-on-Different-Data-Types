@@ -1,256 +1,260 @@
-# Python Arithmetic Operators on Different Data Types
+# Python Arithmetic Operators with All Data Types
 
-## 📌 Description
-This project demonstrates how **Arithmetic Operators** work on different **Python Data Types**.  
-It shows which operations are supported and which raise errors.
+## 📌 Project Description
 
-The program tests arithmetic operations on:
+This project demonstrates how **Python arithmetic operators** behave with different **fundamental and collective data types**.
 
-- Fundamental Data Types
-- Collective Data Types
+The program shows:
 
----
+* Which operations work
+* Which operations produce **TypeError**
+* Which operations produce **ZeroDivisionError**
 
-# Arithmetic Operators in Python
-
-Python provides **6 Arithmetic Operators**:
-
-| Operator | Name |
-|--------|--------|
-| + | Addition |
-| - | Subtraction |
-| * | Multiplication |
-| / | Division |
-| // | Floor Division |
-| % | Modulus |
+This helps beginners understand **how Python handles arithmetic operations between different data types**.
 
 ---
 
-# Fundamental Data Types
+# 🔢 Arithmetic Operators Used
 
-## 1️⃣ Integer
-All arithmetic operators work with integers.
+Python has **6 arithmetic operators**:
 
-Example:
-
-```python
-Int1 = 5
-Int2 = 2
-
-print(Int1 + Int2)   # 7
-print(Int1 - Int2)   # 3
-print(Int1 * Int2)   # 10
-print(Int1 / Int2)   # 2.5
-print(Int1 // Int2)  # 2
-print(Int1 % Int2)   # 1
-```
+| Operator | Meaning        |
+| -------- | -------------- |
+| `+`      | Addition       |
+| `-`      | Subtraction    |
+| `*`      | Multiplication |
+| `/`      | Division       |
+| `//`     | Floor Division |
+| `%`      | Modulus        |
 
 ---
 
-## 2️⃣ Boolean
-In Python, **True = 1** and **False = 0**, so arithmetic operations are possible.
+# 📚 Data Types Covered
 
-Example:
+## Fundamental Data Types
 
-```python
-bool1 = True
-bool2 = False
+* `int`
+* `float`
+* `bool`
+* `complex`
+* `string`
 
-print(bool1 + bool2)   # 1
-print(bool1 - bool2)   # 1
-print(bool1 * bool2)   # 0
-```
+## Collective Data Types
 
-⚠ Division by `False` causes **ZeroDivisionError**.
-
----
-
-## 3️⃣ String
-Only the **+ operator** works with strings (Concatenation).
-
-Example:
-
-```python
-Str1 = "harshal"
-Str2 = "warke"
-
-print(Str1 + Str2)
-```
-
-Output:
-
-```
-harshalwarke
-```
-
-Other arithmetic operators will raise **TypeError**.
+* `list`
+* `tuple`
+* `set`
+* `frozenset`
+* `dictionary`
 
 ---
 
-## 4️⃣ Float
+# ⚙️ Operations Demonstrated
+
+The program performs arithmetic operations on:
+
+### 1️⃣ Integer Operations
+
+Examples:
+
+* int + int
+* int - int
+* int * int
+* int / int
+* int // int
+* int % int
+
+---
+
+### 2️⃣ Boolean Operations
+
+Python treats:
+
+* `True = 1`
+* `False = 0`
+
+Examples:
+
+```
+True + True = 2
+True * False = 0
+```
+
+Some operations produce **ZeroDivisionError** when dividing by `False`.
+
+---
+
+### 3️⃣ String Operations
+
+Allowed:
+
+```
+string + string  → concatenation
+```
+
+Not Allowed:
+
+```
+string - string
+string * string
+string / string
+```
+
+These produce **TypeError**.
+
+---
+
+### 4️⃣ Float Operations
+
 All arithmetic operators work with floats.
 
 Example:
 
-```python
-Float1 = 4.0
-Float2 = 5.0
-
-print(Float1 + Float2)
-print(Float1 - Float2)
-print(Float1 * Float2)
-print(Float1 / Float2)
-print(Float1 // Float2)
-print(Float1 % Float2)
+```
+4.0 + 5.0 = 9.0
+5.0 / 4.0 = 1.25
 ```
 
 ---
 
-## 5️⃣ Complex Numbers
+### 5️⃣ Complex Number Operations
 
-Supported Operators:
+Allowed:
 
-- Addition
-- Subtraction
-- Multiplication
-- Division
+```
++
+-
+*
+/
+```
+
+Not Allowed:
+
+```
+//
+%
+```
+
+---
+
+### 6️⃣ List Operations
+
+Allowed:
+
+```
+list + list → concatenation
+```
 
 Example:
 
-```python
-Comp1 = 5+10j
-Comp2 = 3+8j
-
-print(Comp1 + Comp2)
-print(Comp1 - Comp2)
-print(Comp1 * Comp2)
-print(Comp1 / Comp2)
+```
+[1,2,3] + [4,5,6]
 ```
 
-⚠ `//` and `%` do **not work with complex numbers**.
-
----
-
-# Collective Data Types
-
-## 1️⃣ List
-
-Only **+ operator** works for lists.
-
-It performs **concatenation** (combining lists).
-
-Example:
-
-```python
-list1 = [1,2,3]
-list2 = [4,5,6]
-
-print(list1 + list2)
-```
-
-Output:
+Not allowed:
 
 ```
-[1,2,3,4,5,6]
+-
+*
+/
 ```
 
 ---
 
-## 2️⃣ Tuple
+### 7️⃣ Tuple Operations
 
-Tuples also support **concatenation using +**.
+Same behavior as lists.
 
-Example:
-
-```python
-Tuple1 = (1,2,3)
-Tuple2 = (4,5,6)
-
-print(Tuple1 + Tuple2)
-```
-
-Output:
+Allowed:
 
 ```
-(1,2,3,4,5,6)
+tuple + tuple
+```
+
+Not allowed:
+
+```
+-
+*
+/
 ```
 
 ---
 
-## 3️⃣ Set
+### 8️⃣ Set Operations
 
-Arithmetic operators **do not work with sets**.
+Arithmetic operators are **not supported** on sets.
 
-Example:
-
-```python
-Set1 = {1,2,3}
-Set2 = {4,5,6}
-```
-
-Using `+`, `-`, `*`, `/`, `//`, `%` will produce **TypeError**.
-
-Sets use special methods like:
-
-- union()
-- intersection()
+All operations produce **TypeError**.
 
 ---
 
-## 4️⃣ Frozenset
+### 9️⃣ Frozenset Operations
 
-Frozenset is an **immutable set**.
+Same as sets.
+
+All arithmetic operators produce **TypeError**.
+
+---
+
+### 🔟 Dictionary Operations
 
 Arithmetic operators are **not supported**.
 
+All operations result in **TypeError**.
+
 ---
 
-## 5️⃣ Dictionary
+# 🔄 Cross Datatype Operations
 
-Arithmetic operators **cannot be applied to dictionaries**.
+The project also demonstrates operations like:
 
-Example:
-
-```python
-Dict1 = {1:100,2:"shyam",3:20.5}
-Dict2 = {1:50,2:"Sahane",3:10.5}
+```
+int + bool
+int + float
+int + complex
+int + string
+int + list
+int + tuple
+int + set
+int + frozenset
+int + dictionary
 ```
 
-All arithmetic operations will raise **TypeError**.
+This helps understand **which combinations are valid in Python**.
 
 ---
 
-# 📊 Summary
+# ▶️ How to Run
 
-| Data Type | Supported Operators |
-|-----------|--------------------|
-| Integer | All |
-| Float | All |
-| Boolean | All (except division by False) |
-| String | + |
-| Complex | + - * / |
-| List | + |
-| Tuple | + |
-| Set | None |
-| Frozenset | None |
-| Dictionary | None |
+1. Clone the repository
+
+```
+git clone https://github.com/your-username/your-repository.git
+```
+
+2. Open the project in **VS Code**
+
+3. Run the file
+
+```
+python operators.py
+```
 
 ---
 
-# 🎯 Purpose of this Project
+# 🎯 Learning Outcome
 
-This code helps beginners understand:
+After running this project you will understand:
 
-- Python arithmetic operators
-- How operators behave with different data types
-- Which operations produce errors
-
-It is useful for **Python beginners and interview preparation**.
+* Python arithmetic operator behavior
+* Data type compatibility
+* TypeError cases
+* ZeroDivisionError cases
+* How Python handles mixed data types
 
 ---
 
 # 👨‍💻 Author
 
-**Harshal Warke**  
-BCA Graduate  
-Learning Python Programming
+Harshal Warke
